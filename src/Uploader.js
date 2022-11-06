@@ -40,21 +40,21 @@ const Uploader = () => {
         <div className='box'>
         
             <div className='details'>
-                <div className='inputBox custom-file-input'>
-                <input type={'file'} onChange={(e)=>setFilePath(e.target.files[0])} className='custom-file-input' />
+                <div className='inputBox custom-file-input file'>
+                <input type={'file'} onChange={(e)=>setFilePath(e.target.files[0])} className='custom-file-input mt-2' />
                 </div>
                 <div className='inputBox custom-file-input'>
-                <input onChange={(e)=>setName(e.target.value)} placeholder="Enter NFT Name" className='custom-file-input' /> 
+                <input onChange={(e)=>setName(e.target.value)} placeholder="Enter NFT Name" className='custom-file-input mt-2' /> 
                 </div>
                 <div className='inputBox custom-file-input'>
-                <input onChange={(e)=>setDescription(e.target.value)} placeholder="Enter description" className='custom-file-input' />
+                <input onChange={(e)=>setDescription(e.target.value)} placeholder="Enter description" className='custom-file-input mt-2' />
                 </div>
                 <div className='inputBox custom-file-input'>
-                <input onChange={(e)=>setTrait(e.target.value)} placeholder="Enter Trait Type" className='custom-file-input' />
+                <input onChange={(e)=>setTrait(e.target.value)} placeholder="Enter Trait Type" className='custom-file-input mt-2' />
                 </div>
 
                 <div className='inputBox custom-file-input'>
-                <input onChange={(e)=>setValue(e.target.value)} placeholder="Enter Value" className='custom-file-input' />
+                <input onChange={(e)=>setValue(e.target.value)} placeholder="Enter Value" className='custom-file-input mt-2' />
                 </div>
 
                 <div className='button'>

@@ -61,7 +61,7 @@ body{
 form .inputBox{
 
     margin-right: 25px;
-
+    
 }
 
 
@@ -93,6 +93,10 @@ form file{
     width: 100%;
     max-width: 900px;
     border-radius: 60px;
+}
+
+.file{
+    text-decoration-color: #e5e7eb;
 }
 
 
