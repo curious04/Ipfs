@@ -4,6 +4,8 @@ import "./Uploader.css"
 import mime from 'mime';
 import fs from 'fs';
 import path from 'path';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Uploader = () => {
 
@@ -15,6 +17,19 @@ const Uploader = () => {
     const[trait,setTrait]=useState('');
     const[value,setValue]=useState('');
     const NFT_STORAGE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGM0QThkRENiMGM1MjQwQTJDYjdBMzIwZGRGMDg5QUJhMERDNDVDZkYiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY2MjE5NTgzMzEwMywibmFtZSI6InRwZyJ9.ncleHk0ziyvHC-8RSKo07nxdgJ9OidmguX_YzX-L0p4'
+
+    const diffToast = () => {
+        toast.success('🦄 Uploading to ipfs!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
+    }
 
     const storeNFT=async(filePath,name,description)=>{
 
@@ -58,10 +73,10 @@ const Uploader = () => {
                 </div>
 
                 <div className='button'>
-                <button onClick={()=>storeNFT(filePath,name,description)} className='btn btn-primary btn-block mt-4' >Upload to IPFS</button>
+                <button onClick={(event)=>[storeNFT(filePath,name,description), diffToast()]} className='btn btn-primary btn-block mt-4' >Upload to IPFS</button>
                 </div>
 
-
+                <ToastContainer />
             </div>
 
             <div className='getdetails'>
